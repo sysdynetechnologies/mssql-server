@@ -3,7 +3,7 @@ version: "3"
 services:
   server:
     build: .
-    image: genschsa/mssql-server-linux
+    image: modernweb/mssql-server
     container_name: mssql
     ports:
       - "1433:1433"

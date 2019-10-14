@@ -1,7 +1,7 @@
 {
-  "name": "mssql-server-linux",
+  "name": "mssql-server",
   "version": "1.0.0",
-  "description": "Clone of microsoft/mssql-server-linux image with initdb functionality.",
+  "description": "Extension of the mcr.microsoft.com/mssql/server docker image to support initdb scripts",
   "main": "index.js",
   "scripts": {
     "start": "docker-compose up -d",
@@ -9,6 +9,7 @@
     "down": "docker-compose down",
     "build": "docker-compose build",
     "sqlcmd": "docker-compose exec server sqlcmd -U sa",
+    "push": "docker push modernweb/mssql-server:latest",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
