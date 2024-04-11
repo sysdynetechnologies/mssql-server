@@ -1,12 +1,13 @@
 FROM mcr.microsoft.com/mssql/server
 
-LABEL version="1.0"
 LABEL description="Extension of the mcr.microsoft.com/mssql/server docker image to support initdb scripts"
-LABEL maintainer="ModernWeb"
+LABEL maintainer="Sysdyne Technologies"
+
+USER root
 
 # Install SqlPackage - https://docs.microsoft.com/en-us/sql/tools/sqlpackage
 RUN apt-get update && apt-get install unzip
-RUN wget -q --show-progress -O sqlpackage.zip https://go.microsoft.com/fwlink/?linkid=2102978
+RUN wget -q --show-progress -O sqlpackage.zip https://go.microsoft.com/fwlink/?linkid=2261577
 RUN unzip -qo sqlpackage.zip -d /opt/sqlpackage && chmod +x /opt/sqlpackage/sqlpackage
 
 ENV PATH $PATH:/opt/mssql-tools/bin:/opt/sqlpackage

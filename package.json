@@ -9,7 +9,7 @@
     "down": "docker-compose down",
     "build": "docker-compose build",
     "sqlcmd": "docker-compose exec server sqlcmd -U sa",
-    "push": "docker push modernweb/mssql-server:latest",
+    "push": "docker push ghcr.io/sysdynetechnologies/mssql-server:latest",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {

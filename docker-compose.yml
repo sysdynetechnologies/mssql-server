@@ -1,9 +1,7 @@
-version: "3"
-
 services:
   server:
     build: .
-    image: modernweb/mssql-server
+    image: ghcr.io/sysdynetechnologies/mssql-server
     container_name: mssql
     ports:
       - "1433:1433"

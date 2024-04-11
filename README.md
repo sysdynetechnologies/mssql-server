@@ -9,7 +9,7 @@ It adds functionality to initialize a fresh instance. When a container is starte
 * From Docker Hub
 
 ```
-docker run -p 1433:1433 --name mssql -e 'ACCEPT_EULA=Y' -e 'SA_PASSWORD=Strong(!)Password' -v $PWD/initdb.d:/docker-entrypoint-initdb.d -d modernweb/mssql-server
+docker run -p 1433:1433 --name mssql -e 'ACCEPT_EULA=Y' -e 'SA_PASSWORD=Strong(!)Password' -v $PWD/initdb.d:/docker-entrypoint-initdb.d -d ghcr.io/sysdynetechnologies/mssql-server
 ```
 
 * From this repo using docker-compose:
@@ -23,8 +23,8 @@ _NOTE: You can adjust `.env` values to your needs._
 ## Additional information:
 
  * Linux-based mssql-docker [git repo](https://github.com/microsoft/mssql-docker/tree/master/linux)
- * Running [SQL Server on Linux](https://docs.microsoft.com/en-us/sql/linux/) on top of an Ubuntu 16.04 base image.
- * Make sure that the .sh files have UNIX-style (LF) line endings. Depending on your platform and Git configuration, Git may change them to Windows-style (CR+LF). In this case, the container won't start, and you may see a non-informative error message like: 
- ```
- standard_init_linux.go:195: exec user process caused "no such file or directory"'.
-```
+ * Running [SQL Server on Linux](https://docs.microsoft.com/en-us/sql/linux/).
+ * Make sure that the `.sh` files have UNIX-style (LF) line endings. Depending on your platform and Git configuration, Git may change them to Windows-style (CR+LF). In this case, the container won't start, and you may see a non-informative error message like: 
+   ```
+   standard_init_linux.go:195: exec user process caused "no such file or directory"'.
+   ```
